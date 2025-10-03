@@ -1,7 +1,6 @@
 COMPILE = c++ -g -Wall -Wextra -Werror -std=c++98
 NAME = bureaucrat
-SRCS = main.cpp Animal.cpp Cat.cpp Dog.cpp \
-		WrongAnimal.cpp WrongCat.cpp
+SRCS = main.cpp Bureaucrat.cpp
 OBJS_FOLDER = obj
 OBJS = $(SRCS:%.cpp=$(OBJS_FOLDER)/%.o)
 
