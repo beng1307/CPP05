@@ -3,6 +3,8 @@
 
 #include <string>
 
+class	Form;
+
 class	Bureaucrat
 {
 	private:
@@ -37,6 +39,7 @@ class	Bureaucrat
 		
 		void	increment_grade();
 		void	decrement_grade();
+		void	signForm(Form &form);
 		
 		const std::string	getName() const;
 		unsigned int		getGrade() const;
