@@ -13,13 +13,10 @@ int	main()
         bureaucrat.increment_grade();
         // bureaucrat.decrement_grade();
     }
-    catch (const Bureaucrat::GradeTooHighException &e)
+    catch (std::exception &e)
     {
         std::cerr << "Exception caught: " << e.what() << std::endl;
     }
-    catch (const Bureaucrat::GradeTooLowException &e)
-    {
-        std::cerr << "Exception caught: " << e.what() << std::endl;
-    }
+
     return 0;
 }
