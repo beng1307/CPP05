@@ -31,7 +31,7 @@ ShrubberyCreationForm::~ShrubberyCreationForm()
 	return ;
 }
 
-void	ShrubberyCreationForm::executeAction()
+void	ShrubberyCreationForm::executeAction() const
 {
 	std::string	trees =
 	"  /\\  /\\  /\\  \n"
@@ -39,7 +39,7 @@ void	ShrubberyCreationForm::executeAction()
 	" /  \\/  \\/  \\ \n"
 	"  ||  ||  || \n";
 
-	std::ofstream file(target + "_shrubbery");
+	std::ofstream file((target + "_shrubbery").c_str());
 	if (!file)
 	{
 		std::cout << "File didn't open!" << std::endl;

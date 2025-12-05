@@ -1,5 +1,5 @@
-#ifndef SHRUBBERYCREATIONFORM_HPP
-#define	SHRUBBERYCREATIONFORM_HPP
+#ifndef PRESIDENTIALPARDONFORM_HPP
+#define	PRESIDENTIALPARDONFORM_HPP
 
 #include <string>
 #include "AForm.hpp"
@@ -21,7 +21,7 @@ class	PresidentialPardonForm: public AForm
 		PresidentialPardonForm(PresidentialPardonForm &other);
 		~PresidentialPardonForm();
 
-		void	executeAction();
+		void	executeAction() const;
 };
 	
 #endif

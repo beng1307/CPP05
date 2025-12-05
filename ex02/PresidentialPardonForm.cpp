@@ -30,7 +30,7 @@ PresidentialPardonForm::~PresidentialPardonForm()
 	return ;
 }
 
-void	PresidentialPardonForm::executeAction()
+void	PresidentialPardonForm::executeAction() const
 {
 	std::cout << target << "has been pardoned by Zaphod Beeblebrox." << std::endl;
 }

@@ -1,6 +1,6 @@
 COMPILE = c++ -g -Wall -Wextra -Werror -std=c++98 -fPIE
 NAME = bureaucrat
-SRCS = main.cpp Bureaucrat.cpp AForm.cpp \
+SRCS = main.cpp Bureaucrat.cpp AForm.cpp Intern.cpp \
 PresidentialPardonForm.cpp RobotomyRequestForm.cpp ShrubberyCreationForm.cpp
 OBJS_FOLDER = obj
 OBJS = $(SRCS:%.cpp=$(OBJS_FOLDER)/%.o)

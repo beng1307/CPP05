@@ -21,7 +21,7 @@ class	ShrubberyCreationForm: public AForm
 		ShrubberyCreationForm(ShrubberyCreationForm &other);
 		~ShrubberyCreationForm();
 
-		void	executeAction();
+		void	executeAction() const;
 };
 	
 #endif

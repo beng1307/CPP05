@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Bureaucrat.hpp"
+#include "Intern.hpp"
 #include "AForm.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
@@ -7,25 +8,18 @@
 
 int main()
 {
+	Bureaucrat	bureaucrat("Jimmy", 3);
+	AForm		*form;
+	Intern		intern;
+
 	try
 	{
-		Bureaucrat test("Burny", 1);
-		ShrubberyCreationForm shrub("shrubbery");
-		RobotomyRequestForm robot("robotomy");
-		PresidentialPardonForm pardon("presidential");
-	
-		std::cout << test << shrub << robot << pardon;
-	
-		shrub.beSigned(test);
-		robot.beSigned(test);
-		pardon.beSigned(test);
-
-		shrub.execute(test);
-		robot.execute(test);
-		pardon.execute(test);
+		form = intern.makeForm("robotomy request", "C26");
+		form->beSigned(bureaucrat);
+		form->execute(bureaucrat);
 	}
 	catch (std::exception &e)
-    {
-        std::cerr << "Exception caught: " << e.what() << std::endl;
-    }
+	{
+		std::cerr << "Exception caught: " << e.what() << std::endl;
+	}
 }

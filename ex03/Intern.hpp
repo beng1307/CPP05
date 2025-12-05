@@ -18,7 +18,7 @@ class	Intern
 		{
 			public:
 
-				virtual char *what() const throw();
+				virtual const char *what() const throw();
 		};
 
 		static AForm	*createShrubberyForm(const std::string &target);

@@ -3,7 +3,7 @@
 
 #include <string>
 
-class	Form;
+class	AForm;
 
 class	Bureaucrat
 {
@@ -38,7 +38,7 @@ class	Bureaucrat
 		
 		void	increment_grade();
 		void	decrement_grade();
-		void	signForm(Form &form);
+		void	signForm(AForm &form);
 		
 		const std::string	getName() const;
 		unsigned int		getGrade() const;

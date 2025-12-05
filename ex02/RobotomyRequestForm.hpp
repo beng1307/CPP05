@@ -1,5 +1,5 @@
-#ifndef SHRUBBERYCREATIONFORM_HPP
-#define	SHRUBBERYCREATIONFORM_HPP
+#ifndef ROBOTOMYREQUESTFORM_HPP
+#define	ROBOTOMYREQUESTFORM_HPP
 
 #include <string>
 #include "AForm.hpp"
@@ -21,7 +21,7 @@ class	RobotomyRequestForm: public AForm
 		RobotomyRequestForm(RobotomyRequestForm &other);
 		~RobotomyRequestForm();
 
-		void	executeAction();
+		void	executeAction() const;
 };
 	
 #endif

@@ -1,5 +1,6 @@
 #include "RobotomyRequestForm.hpp"
 #include <cstdlib>
+#include <ctime>
 #include "AForm.hpp"
 #include <string>
 #include <iostream>
@@ -31,8 +32,15 @@ RobotomyRequestForm::~RobotomyRequestForm()
 	return ;
 }
 
-void	RobotomyRequestForm::executeAction()
+void	RobotomyRequestForm::executeAction() const
 {
+	static bool already_seeded = false;
+    if (!already_seeded)
+    {
+        srand(time(NULL));
+        already_seeded = true;
+    }
+	
 	bool	CoinThrow = rand() % 2;
 
 	if (CoinThrow)
