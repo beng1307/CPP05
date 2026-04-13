@@ -30,6 +30,12 @@ Form::Form(Form &other):
 	return ;
 }
 
+Form::~Form()
+{
+	return ;
+}
+
+
 const char *Form::GradeTooLowException::what() const throw()
 {
 	return "Grade too Low!";
@@ -40,11 +46,6 @@ const char *Form::GradeTooHighException::what() const throw()
 	return "Grade too High!";
 }
 
-Form::~Form()
-{
-	return ;
-}
-
 void	Form::beSigned(Bureaucrat &bureaucrat)
 {
 	if (bureaucrat.getGrade() <= signing_grade)
@@ -53,7 +54,7 @@ void	Form::beSigned(Bureaucrat &bureaucrat)
 		throw (GradeTooLowException());
 }
 
-const std::string	Form::get_name() const
+std::string	Form::get_name() const
 {
 	return (name);
 }

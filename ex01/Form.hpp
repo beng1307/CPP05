@@ -39,10 +39,10 @@ class	Form
 
 		void	beSigned(Bureaucrat &bureaucrat);
 
-		const std::string	get_name() const;
-		bool				get_is_signed() const;
-		unsigned			get_signing_grade() const;
-		unsigned			get_executing_grade() const;
+		std::string		get_name() const;
+		bool			get_is_signed() const;
+		unsigned		get_signing_grade() const;
+		unsigned		get_executing_grade() const;
 		
 };
 	

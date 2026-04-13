@@ -58,7 +58,7 @@ void	Bureaucrat::decrement_grade()
 		throw GradeTooLowException();
 }
 
-const std::string	Bureaucrat::getName() const
+std::string	Bureaucrat::getName() const
 {
 	return (name);
 }

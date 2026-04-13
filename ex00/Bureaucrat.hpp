@@ -38,8 +38,8 @@ class	Bureaucrat
 		void	increment_grade();
 		void	decrement_grade();
 		
-		const std::string	getName() const;
-		unsigned int		getGrade() const;
+		std::string		getName() const;
+		unsigned int	getGrade() const;
 	};
 	
 	std::ostream	&operator<<(std::ostream &outputstream, const Bureaucrat &bureaucrat);

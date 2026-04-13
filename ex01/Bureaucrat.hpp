@@ -41,8 +41,8 @@ class	Bureaucrat
 		void	decrement_grade();
 		void	signForm(Form &form);
 		
-		const std::string	getName() const;
-		unsigned int		getGrade() const;
+		std::string		getName() const;
+		unsigned int	getGrade() const;
 	};
 	
 	std::ostream	&operator<<(std::ostream &outputstream, const Bureaucrat &bureaucrat);

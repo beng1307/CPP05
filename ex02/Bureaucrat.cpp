@@ -73,7 +73,7 @@ void	Bureaucrat::signForm(AForm &form)
 	}
 }
 
-const std::string	Bureaucrat::getName() const
+std::string	Bureaucrat::getName() const
 {
 	return (name);
 }

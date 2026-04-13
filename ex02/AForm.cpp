@@ -68,7 +68,7 @@ void	AForm::execute(Bureaucrat const &executor) const
 	executeAction();
 }
 
-const std::string	AForm::get_name() const
+std::string	AForm::get_name() const
 {
 	return (name);
 }
