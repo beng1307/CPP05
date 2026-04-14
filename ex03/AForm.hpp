@@ -48,10 +48,10 @@ class	AForm
 		void				execute(Bureaucrat const &executor) const;
 		virtual	void		executeAction() const = 0;
 		
-		std::string	get_name() const;
-		bool				get_is_signed() const;
-		unsigned			get_signing_grade() const;
-		unsigned			get_executing_grade() const;
+		std::string		get_name() const;
+		bool			get_is_signed() const;
+		unsigned		get_signing_grade() const;
+		unsigned		get_executing_grade() const;
 		
 };
 	

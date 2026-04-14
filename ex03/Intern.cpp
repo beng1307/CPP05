@@ -3,7 +3,6 @@
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include <string>
-#include <map>
 
 Intern::Intern()
 {
@@ -51,16 +50,12 @@ AForm	*Intern::createRobotomyForm(const std::string &target)
 
 AForm	*Intern::makeForm(std::string name, std::string target)
 {
-	std::map<std::string, AForm *(*)(const std::string &)>	formMap;
-
-	formMap["shrubbery creation"] = &Intern::createShrubberyForm;
-	formMap["presidential pardon"] = &Intern::createPresidentialForm;
-	formMap["robotomy request"] = &Intern::createRobotomyForm;
-
-	std::map<std::string, AForm *(*)(const std::string &)>::iterator index = formMap.find(name);
-
-	if (index != formMap.end())
-		return (index->second(target));
-
-	throw NotExistingForm();
+	if (name == "shrubbery creation")
+		return (Intern::createShrubberyForm(target));
+	else if (name == "presidential pardon")
+		return (Intern::createPresidentialForm(target));
+	else if (name == "robotomy request")
+		return (Intern::createRobotomyForm(target));
+	else
+		throw NotExistingForm();
 }
