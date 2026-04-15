@@ -1,5 +1,5 @@
 COMPILE = c++ -g -Wall -Wextra -Werror -std=c++98 -fPIE
-NAME = bureaucrat
+NAME = form_up_maggots
 SRCS = main.cpp Bureaucrat.cpp Form.cpp
 OBJS_FOLDER = obj
 OBJS = $(SRCS:%.cpp=$(OBJS_FOLDER)/%.o)
