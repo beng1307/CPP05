@@ -21,9 +21,9 @@ class	Intern
 				virtual const char *what() const throw();
 		};
 
-		static AForm	*createShrubberyForm(const std::string &target);
-		static AForm	*createPresidentialForm(const std::string &target);
-		static AForm	*createRobotomyForm(const std::string &target);
+		AForm	*createShrubberyForm(const std::string &target);
+		AForm	*createPresidentialForm(const std::string &target);
+		AForm	*createRobotomyForm(const std::string &target);
 
 		AForm	*makeForm(std::string name, std::string target);
 

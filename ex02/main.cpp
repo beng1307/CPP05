@@ -26,8 +26,24 @@ int main()
 	}
 
 	///////////////////////////////////////////////////////////////////////////
+	// Test case: Bureaucrat creates and executes form
+	std::cout << "\033[33m===Bureaucrat creates and executes form===\033[0m" << std::endl;
+	try
+	{
+		Bureaucrat bureaucrat("Jason", 1);
+		ShrubberyCreationForm shrub("floor");
+
+		bureaucrat.signForm(shrub);
+		bureaucrat.executeForm(shrub);
+	}
+	catch (std::exception &e)
+	{
+		std::cerr << "Exception caught: " << e.what() << std::endl;
+	}
+
+	///////////////////////////////////////////////////////////////////////////
 	// Test case: Executing a form that is not signed
-	std::cout << "\033[33m===Executing a form that is not signed===\033[0m" << std::endl;
+	std::cout << "\n\033[33m===Executing a form that is not signed===\033[0m" << std::endl;
 	try
 	{
 		Bureaucrat bureaucrat("Tony", 1);
@@ -93,6 +109,4 @@ int main()
     {
         std::cerr << "Exception caught: " << e.what() << std::endl;
     }
-
-	return (0);
 }

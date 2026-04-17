@@ -3,6 +3,7 @@
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
 #include <string>
+#include <iostream>
 
 Intern::Intern()
 {
@@ -50,12 +51,27 @@ AForm	*Intern::createRobotomyForm(const std::string &target)
 
 AForm	*Intern::makeForm(std::string name, std::string target)
 {
-	if (name == "shrubbery creation")
-		return (Intern::createShrubberyForm(target));
-	else if (name == "presidential pardon")
-		return (Intern::createPresidentialForm(target));
-	else if (name == "robotomy request")
-		return (Intern::createRobotomyForm(target));
-	else
-		throw NotExistingForm();
+	const std::string	form_names[3] =
+	{
+		"shrubbery creation",
+		"presidential pardon",
+		"robotomy request"
+	};
+
+	AForm	*(Intern::*form_functions[3])(const std::string &) =
+	{
+		&Intern::createShrubberyForm,
+		&Intern::createPresidentialForm,
+		&Intern::createRobotomyForm
+	};
+
+	for (int i = 0; i < 3; i++)
+	{
+		if (name == form_names[i])
+		{
+			std::cout << "Intern creates " << form_names[i] << std::endl;
+			return ((this->*form_functions[i])(target));
+		}
+	}
+	throw NotExistingForm();
 }
